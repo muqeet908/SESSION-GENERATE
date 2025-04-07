@@ -8,7 +8,7 @@ const fs = require('fs');
 let router = express.Router()
 const pino = require("pino");
 const {
-	default: Maher_Zubair,
+	default: ABDUL_MUQEET,
 	useMultiFileAuthState,
 	jidNormalizedUser,
 	Browsers,
@@ -28,13 +28,13 @@ const {
 } = require("node:fs/promises")
 router.get('/', async (req, res) => {
 	const id = makeid();
-	async function SIGMA_MD_QR_CODE() {
+	async function SNAKE_MD_QR_CODE() {
 		const {
 			state,
 			saveCreds
 		} = await useMultiFileAuthState('./temp/' + id)
 		try {
-			let Qr_Code_By_Maher_Zubair = Maher_Zubair({
+			let Qr_Code_By_ABDUL_MUQEET = ABDUL_MUQEET({
 				auth: state,
 				printQRInTerminal: false,
 				logger: pino({
@@ -43,8 +43,8 @@ router.get('/', async (req, res) => {
 				browser: Browsers.macOS("Desktop"),
 			});
 
-			Qr_Code_By_Maher_Zubair.ev.on('creds.update', saveCreds)
-			Qr_Code_By_Maher_Zubair.ev.on("connection.update", async (s) => {
+			Qr_Code_By_ABDUL_MUQEET.ev.on('creds.update', saveCreds)
+			Qr_Code_By_ABDUL_MUQEET.ev.on("connection.update", async (s) => {
 				const {
 					connection,
 					lastDisconnect,
@@ -56,37 +56,37 @@ router.get('/', async (req, res) => {
 					let data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
 					await delay(800);
 				   let b64data = Buffer.from(data).toString('base64');
-				   let session = await Qr_Code_By_Maher_Zubair.sendMessage(Qr_Code_By_Maher_Zubair.user.id, { text: "" + b64data });
+				   let session = await Qr_Code_By_ABDUL_MUQEET.sendMessage(Qr_Code_By_ABDUL_MUQEET.user.id, { text: "" + b64data });
 	
 				   let SIGMA_MD_TEXT = `
 ┏━━━━━━━━━━━━━━
-┃MASTER MD SESSION IS 
+┃SNAKE-TECH-MD SESSION IS 
 ┃SUCCESSFULLY
 ┃CONNECTED ✅🔥
 ┗━━━━━━━━━━━━━━━
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-❶ || Creator = Sahan / MASTER MIND_👨🏻‍💻
+❶ || Creator = MUQEET / MASTER MIND_👨🏻‍💻
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-❷ || WhattsApp Channel = https://whatsapp.com/channel/0029VaWWZa1G3R3c4TPADo0M
+❷ || WhattsApp Channel = https://whatsapp.com/channel/0029Vax9eYb9MF8y8mfpIh3v
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-❸ || Owner = https://wa.me/+94720797915
+❸ || Owner = https://wa.me/+923163954173
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-❺ || INSTAGRAM = https://www.instagram.com/sahanmaduwantha2006?igsh=YzljYTk1ODg3Zg==
+❺ || WHATSAPP GROUP = https://chat.whatsapp.com/DuIFL0wdYagErHk7iNl6Gf
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-❻ || FaceBook = https://www.facebook.com/profile.php?id=100089180711131
+❻ || 2ND WHATSAPP GROUP = https://chat.whatsapp.com/C60EDaXsjii0RE0kC0fcSl
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴍʀ ꜱᴀʜᴀɴ ᴏꜰᴄ
        `
-	 await Qr_Code_By_Maher_Zubair.sendMessage(Qr_Code_By_Maher_Zubair.user.id,{text:SIGMA_MD_TEXT},{quoted:session})
+	 await Qr_Code_By_ABDUL_MUQEET.sendMessage(Qr_Code_By_ABDUL_MUQEET.user.id,{text:SNAKE_MD_TEXT},{quoted:session})
 
 
 
 					await delay(100);
-					await Qr_Code_By_Maher_Zubair.ws.close();
+					await Qr_Code_By_ABDUL_MUQEET.ws.close();
 					return await removeFile("temp/" + id);
 				} else if (connection === "close" && lastDisconnect && lastDisconnect.error && lastDisconnect.error.output.statusCode != 401) {
 					await delay(10000);
-					SIGMA_MD_QR_CODE();
+					SNAKE_MD_QR_CODE();
 				}
 			});
 		} catch (err) {
