@@ -14,7 +14,7 @@ Get New Version__😎✔
 
 
 
-# 👨‍💻 *SESSION MADE BY MASTER MIND* 👨‍💻
+# 👨‍💻 *SESSION MADE BY MUQEET MASTER MIND* 👨‍💻
 
 
 ## *NOTE*
@@ -50,4 +50,4 @@ Get New Version__😎✔
 <br>
 
 
-[`Helper`](https://wa.me/+94720797915?text=Session_Problem😢)
+[`Helper`](https://wa.me/+923163954173?text=Session_Problem😢)
